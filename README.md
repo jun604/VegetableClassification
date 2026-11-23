@@ -20,32 +20,54 @@ If you use this dataset, please cite the original paper as requested by the auth
   + 별도로 랜덤 생성 후 각 파라미터 생성에서 공유
 ## 성능 비교: 각 모델별 정확도가 가장 높은 5개의 파라미터 조합의 평균값 비교
 ### Logistic Regression
+평균: 
  - Top 1: params={'C': np.float64(0.3502718917554013), 'max_iter': 1553} | test_accuracy=0.6713
  - Top 2: params={'C': np.float64(0.10477323365227816), 'max_iter': 667} | test_accuracy=0.6727
  - Top 3: params={'C': np.float64(0.25202399872719894), 'max_iter': 515} | test_accuracy=0.6707
  - Top 4: params={'C': np.float64(0.6041468348066917), 'max_iter': 1639} | test_accuracy=0.6653
  - Top 5: params={'C': np.float64(0.46737903782076806), 'max_iter': 1358} | test_accuracy=0.6697
 ### k-Nearest Neighbors (k-NN)
+평균: 
 -  Top 1: params={'n_neighbors': 11, 'p': 1, 'weights': 'distance'} | test_accuracy=0.8283
 -  Top 2: params={'n_neighbors': 8, 'p': 1, 'weights': 'uniform'} | test_accuracy=0.8153
 -  Top 3: params={'n_neighbors': 9, 'p': 2, 'weights': 'distance'} | test_accuracy=0.8040
 -  Top 4: params={'n_neighbors': 17, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7890
 -  Top 5: params={'n_neighbors': 18, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7830
 ### Support Vector Machine (SVM)
+평균: 
 -  Top 1: params={'C': np.float64(44.00139059238714), 'gamma': np.float64(0.0021602642622069383), 'kernel': 'rbf'} | test_accuracy=0.9573
 -  Top 2: params={'C': np.float64(961.4375218857606), 'gamma': np.float64(0.0012564327892794409), 'kernel': 'rbf'} | test_accuracy=0.9560
 -  Top 3: params={'C': np.float64(1.6777388393177377), 'gamma': np.float64(0.0008544397929536556), 'kernel': 'rbf'} | test_accuracy=0.9227
 -  Top 4: params={'C': np.float64(34.881044844591194), 'gamma': np.float64(0.006034305320476808), 'kernel': 'rbf'} | test_accuracy=0.9270
 -  Top 5: params={'C': np.float64(94.25660090175117), 'gamma': np.float64(0.0001330435200932225), 'kernel': 'rbf'} | test_accuracy=0.9183
 ### Decision Tree
+평균: 
 -  Top 1: params={'criterion': 'entropy', 'max_depth': 45, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 1} | test_accuracy=0.5847
 -  Top 2: params={'criterion': 'entropy', 'max_depth': 40, 'max_features': np.float64(0.48590207748087033), 'min_samples_leaf': 1} | test_accuracy=0.5957
 -  Top 3: params={'criterion': 'entropy', 'max_depth': 12, 'max_features': np.float64(0.647599603185538), 'min_samples_leaf': 1} | test_accuracy=0.5717
 -  Top 4: params={'criterion': 'entropy', 'max_depth': 21, 'max_features': np.float64(0.8008884735754034), 'min_samples_leaf': 4} | test_accuracy=0.5693
 -  Top 5: params={'criterion': 'gini', 'max_depth': 21, 'max_features': np.float64(0.32796342556421637), 'min_samples_leaf': 3} | test_accuracy=0.5753
 ### Random Forest
+평균: 
+-  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.8950
+-  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.8783
+-  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8833
+-  Top 4: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8740
+-  Top 5: params={'max_depth': 35, 'max_features': np.float64(0.6380442565692083), 'min_samples_leaf': 3, 'n_estimators': 65} | test_accuracy=0.8603
 ### Bagging Classifier
+평균: 
+-  Top 1: params={'base_max_depth': 30, 'max_features': np.float64(0.824542293027221), 'max_samples': np.float64(0.8397952957497588), 'n_estimators': 77} | test_accuracy=0.8657
+-  Top 2: params={'base_max_depth': 21, 'max_features': np.float64(0.8577774811252881), 'max_samples': np.float64(0.66607900647939), 'n_estimators': 93} | test_accuracy=0.8647
+-  Top 3: params={'base_max_depth': 26, 'max_features': np.float64(0.7623924077137898), 'max_samples': np.float64(0.897431177410142), 'n_estimators': 49} | test_accuracy=0.8653
+-  Top 4: params={'base_max_depth': 26, 'max_features': np.float64(0.6969886825702467), 'max_samples': np.float64(0.5211763359571939), 'n_estimators': 96} | test_accuracy=0.8660
+-  Top 5: params={'base_max_depth': 12, 'max_features': np.float64(0.7482854308468129), 'max_samples': np.float64(0.9903740279316868), 'n_estimators': 70} | test_accuracy=0.8277
 ### Extra Trees
+평균: 
+-  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.9093
+-  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.9027
+-  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8987
+-  Top 4: params={'max_depth': 42, 'max_features': np.float64(0.6410158363118194), 'min_samples_leaf': 3, 'n_estimators': 110} | test_accuracy=0.9013
+-  Top 5: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8960
 ### AdaBoost
 ### Gradient Boosting
 ### Perceptron
