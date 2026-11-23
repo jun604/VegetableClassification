@@ -83,6 +83,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 평균: 
 ### Deep Neural Network (DNN)
 평균: 
+
 ---
 ## **각 모델의 파라미터 및 특이점 설명**
 ### 1. 선형 · 거리 · 마진 계열
