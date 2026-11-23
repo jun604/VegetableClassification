@@ -18,7 +18,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 ## 입력 파라미터: 랜덤 파라미터 10개 생성
 - `PARAMETER_SEED`: 파라미터용 시드
   + 별도로 랜덤 생성 후 각 파라미터 생성에서 공유
-## 성능 비교: 정확도가 가장 높은 5개의 변수 집단을 가져와서 비교
+## 성능 비교: 각 모델별 정확도가 가장 높은 5개의 파라미터 조합을 가져와서 평균값 비교
 ---
 ## **각 모델의 파라미터 및 특이점 설명**
 ### 1. 선형 · 거리 · 마진 계열
