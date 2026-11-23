@@ -69,10 +69,20 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 4: params={'max_depth': 42, 'max_features': np.float64(0.6410158363118194), 'min_samples_leaf': 3, 'n_estimators': 110} | test_accuracy=0.9013
 -  Top 5: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8960
 ### AdaBoost
+평균: 
+-  Top 1: params={'base_max_depth': 3, 'learning_rate': np.float64(0.040373588785906925), 'n_estimators': 104} | test_accuracy=0.4597
+-  Top 2: params={'base_max_depth': 3, 'learning_rate': np.float64(0.1291856423208951), 'n_estimators': 48} | test_accuracy=0.4527
+-  Top 3: params={'base_max_depth': 3, 'learning_rate': np.float64(1.901799945165288), 'n_estimators': 99} | test_accuracy=0.4057
+-  Top 4: params={'base_max_depth': 2, 'learning_rate': np.float64(0.4078482868970378), 'n_estimators': 44} | test_accuracy=0.3650
+-  Top 5: params={'base_max_depth': 3, 'learning_rate': np.float64(0.012515689160377982), 'n_estimators': 148} | test_accuracy=0.3650
 ### Gradient Boosting
+평균: 
 ### Perceptron
+평균: 
 ### Multi-Layer Perceptron (MLP)
+평균: 
 ### Deep Neural Network (DNN)
+평균: 
 ---
 ## **각 모델의 파라미터 및 특이점 설명**
 ### 1. 선형 · 거리 · 마진 계열
