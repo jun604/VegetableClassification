@@ -1,5 +1,20 @@
 # **Vegetable Classification**
 
+## 데이터셋
+
+This project uses the [Vegetable Image Dataset](https://www.kaggle.com/datasets/misrakahmed/vegetable-image-dataset) from Kaggle.
+
+* **Classes:** 15 vegetable types (`bean`, `bitter gourd`, `bottle gourd`, `brinjal`, `broccoli`, `cabbage`, `capsicum`, `carrot`, `cauliflower`, `cucumber`, `papaya`, `potato`, `pumpkin`, `radish`, `tomato`)
+* **Total Images:** 21,000 images (`224×224`, `.jpg`)
+* **Split:** Train (15,000) / Validation (3,000) / Test (3,000)
+
+### 출처
+
+If you use this dataset, please cite the original paper as requested by the authors:
+
+* M. I. Ahmed, S. M. Mamun, and A. U. Z. Asif, "[DCNN-based vegetable image classification using transfer learning: A comparative study](https://www.researchgate.net/publication/352846889_DCNN-Based_Vegetable_Image_Classification_Using_Transfer_Learning_A_Comparative_Study)," in *2021 5th International Conference on Computer, Communication and Signal Processing (ICCCSP)*, IEEE, 2021, pp. 235–243.
+
+
 ## 입력 파라미터: 랜덤 파라미터 10개 생성
 ## 성능 비교: 정확도가 가장 높은 5개의 변수 집단을 가져와서 비교
 ---
