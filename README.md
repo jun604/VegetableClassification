@@ -29,19 +29,61 @@ If you use this dataset, please cite the original paper as requested by the auth
 - `PARAMETER_SEED`: 파라미터용 시드
   + 별도로 랜덤 생성 후 각 파라미터 생성에서 공유
 - Logistic Regression
-  + c: 0.001 ~ 1,000
+  + c: 0.001 ~ 1,000 (loguniform 사용)
   + max_iter: 500 ~ 2000
 - k-Nearest Neighbors (k-NN)
+  + n_neighbors: 3 ~ 20
+  + weights: "uniform", "distance"
+  + p: 1, 2
 - Support Vector Machine (SVM)
+  + c: 0.01 ~ 1,000 (loguniform 사용)
+  + gamma: 0.00001 ~ 0.1 (loguniform 사용)
+  + kernel: rbf
 - Decision Tree
+  + criterion: gini, entropy
+  + max_depth: 3 ~ 50
+  + min_samples_leaf: 1 ~ 10
+  + max_features: 0.3 ~ 1.0 (uniform 사용)
 - Random Forest
+  + n_estimators: 50 ~ 200
+  + max_depth: 5 ~ 50
+  + min_samples_leaf: 1 ~ 5
+  + max_features: 0.3 ~ 1.0 (uniform 사용)
 - Bagging Classifier
+  + n_estimators: 10 ~ 100
+  + max_samples: 0.5 ~ 1.0 (uniform 사용)
+  + max_features: 0.5 ~ 1.0 (uniform 사용)
+  + base_max_depth: 3 ~ 30
 - Extra Trees
+  + n_estimators: 50 ~ 200
+  + max_depth: 5 ~ 50
+  + min_samples_leaf: 1 ~ 5
+  + max_features: 0.3 ~ 1.0 (uniform 사용)
 - AdaBoost
+  + n_estimators: 30 ~ 150
+  + learning_rate: 0.01 ~ 2.0 (loguniform 사용)
+  + base_max_depth: 1 ~ 3
 - Gradient Boosting
+  + n_estimators: 30 ~ 150
+  + learning_rate: 0.01 ~ 0.5 (loguniform 사용)
+  + max_depth: 1 ~ 5
+  + subsample: 0.5 ~ 1.0 (uniform 사용)
 - Perceptron
+  + penalty: None, "l2", "l1"
+  + alpha: 0.000001 ~ 0.01 (loguniform 사용)
+  + eta0: 0.001 ~ 1.0 (loguniform 사용)
+  + max_iter: 500 ~ 2000
 - Multi-Layer Perceptron (MLP)
+  + hidden_layer_sizes: (int(rng.integers(16, 257)),) (은닉층 1개, 뉴런 16 ~ 256개)
+  + activation: ["relu", "tanh"]
+  + alpha: 0.00001 ~ 0.1
+  + max_iter: 30 ~ 100
 - Deep Neural Network (DNN)
+  + layer_count: 2 ~ 4
+  + hidden_layer_sizes: tuple(int(size) for size in rng.integers(16, 257, size=layer_count)) (은닉층 2 ~ 4개, 뉴런 16 ~ 256개)
+  + activation: ["relu", "tanh"]
+  + alpha: 0.00001 ~ 0.1
+  + max_iter: 30 ~ 100
 ## 성능 비교: 각 모델별 정확도가 가장 높은 5개의 파라미터 조합의 평균값 비교
 ### Logistic Regression
 평균: test accuracy = 0.6699 | train accuracy = 0.8033
