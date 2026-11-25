@@ -7,6 +7,7 @@ This project uses the [Vegetable Image Dataset](https://www.kaggle.com/datasets/
 * **Classes:** 15 vegetable types (`bean`, `bitter gourd`, `bottle gourd`, `brinjal`, `broccoli`, `cabbage`, `capsicum`, `carrot`, `cauliflower`, `cucumber`, `papaya`, `potato`, `pumpkin`, `radish`, `tomato`)
 * **Total Images:** 21,000 images (`224×224`, `.jpg`)
 * **Split:** Train (15,000) / Validation (3,000) / Test (3,000)
+* **features** : 224 × 224 x 3
 
 ### 출처
 
@@ -14,6 +15,15 @@ If you use this dataset, please cite the original paper as requested by the auth
 
 * M. I. Ahmed, S. M. Mamun, and A. U. Z. Asif, "[DCNN-based vegetable image classification using transfer learning: A comparative study](https://www.researchgate.net/publication/352846889_DCNN-Based_Vegetable_Image_Classification_Using_Transfer_Learning_A_Comparative_Study)," in *2021 5th International Conference on Computer, Communication and Signal Processing (ICCCSP)*, IEEE, 2021, pp. 235–243.
 
+## 전처리
+1. 파일 필터링: `suffix.lower() in {".jpg", ".jpeg", ".png"}` | 이미지 파일만 선별해 숨김 파일·비이미지 파일 제외
+2. 채널 통일: `.convert("RGB")` | 흑백(1채널)이나 RGBA(4채널) 이미지를 3채널 RGB로 통일
+3. 해상도 축소 (피처 축소): `.resize((16, 16), BILINEAR)` | 원본(예: $224 \times 224 \times 3 = 150,528$개)을 $16 \times 16 \times 3 = \mathbf{768}$개 피처로 축소
+4. 1차원 평탄화: `.reshape(-1)` | (16, 16, 3) 3차원 배열을 scikit-learn 입력용 1차원 벡터(768,)로 변환
+5. 픽셀 정규화: `/ 255.0` | 0 ~ 255 정수 밝기 값을 0.0 ~ 1.0 실수 범위로 스케일링
+6. 데이터 타입 통일: `dtype=np.float32 / np.int64` | 피처는 float32(메모리·연산 효율), 레이블은 int64로 고정
+7. 레이블 인코딩: `class_to_index` | 15개 채소 폴더명(문자열)을 알파벳순 0~14 정수로 매핑
+8. 모델별 선택적 표준화: `make_pipeline(StandardScaler(), ...)` | 거리·기울기 기반 모델(k-NN, SVM, MLP 등)에만 평균 0·표준편차 1로 표준화 적용 (트리 계열은 제외, 파이프라인으로 데이터 누수 방지)
 
 ## 입력 파라미터: 랜덤 파라미터 10개 생성
 - `PARAMETER_SEED`: 파라미터용 시드
@@ -65,7 +75,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 4: params={'criterion': 'entropy', 'max_depth': 21, 'max_features': np.float64(0.8008884735754034), 'min_samples_leaf': 4} | test_accuracy=0.5693 | train_accuracy=0.8815
 -  Top 5: params={'criterion': 'gini', 'max_depth': 21, 'max_features': np.float64(0.32796342556421637), 'min_samples_leaf': 3} | test_accuracy=0.5753 | train_accuracy=0.8829
 ![모델 정확도 그래프](./model_accuracy_plots/decision_tree_train_validation_accuracy.png)
-### Random Forest
+### Random Forest (Decision Tree 기반)
 평균: test accuracy = 0.8782 | train accuracy = 0.9998
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.8950 | train_accuracy=1.0000
 -  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.8783 | train_accuracy=0.9999
@@ -182,7 +192,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 * **`max_samples` / `max_features`:** 각 기본 모델이 사용할 샘플/특성 비율. 낮출수록 모델 간 다양성 증가(너무 낮으면 개별 모델 약화로 과소적합 가능).
 * **`estimator`:** 기본 모델(보통 Decision Tree). 기반 모델의 복잡도가 전체 앙상블 특성에 직접 반영됨.
 
-#### Random Forest
+#### Random Forest (Decision Tree 기반)
 * **`n_estimators`:** 트리 수. 증가 시 예측 분산 감소 및 안정화, 연산 시간 증가.
 * **`max_features`:** 각 분기에서 고려할 특성 수. 줄일수록 트리 간 상관관계가 낮아져 분산 감소에 유리하나, 너무 작으면 핵심 변수 선택이 어려울 수 있음.
 * **`max_depth`, `min_samples_split`, `min_samples_leaf`:** 개별 트리 크기 제한을 통한 과적합 제어 및 속도 조절.
