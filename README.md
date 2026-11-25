@@ -18,7 +18,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 ## 전처리
 1. 파일 필터링: `suffix.lower() in {".jpg", ".jpeg", ".png"}` | 이미지 파일만 선별해 숨김 파일·비이미지 파일 제외
 2. 채널 통일: `.convert("RGB")` | 흑백(1채널)이나 RGBA(4채널) 이미지를 3채널 RGB로 통일
-3. 해상도 축소 (피처 축소): `.resize((16, 16), BILINEAR)` | 원본(예: $224 \times 224 \times 3 = 150,528$개)을 $16 \times 16 \times 3 = \mathbf{768}$개 피처로 축소
+3. 피처 축소 (해상도 축소): `.resize((16, 16), BILINEAR)` | 원본(예: $224 \times 224 \times 3 = 150,528$개)을 $16 \times 16 \times 3 = \mathbf{768}$개 피처로 축소
 4. 1차원 평탄화: `.reshape(-1)` | (16, 16, 3) 3차원 배열을 scikit-learn 입력용 1차원 벡터(768,)로 변환
 5. 픽셀 정규화: `/ 255.0` | 0 ~ 255 정수 밝기 값을 0.0 ~ 1.0 실수 범위로 스케일링
 6. 데이터 타입 통일: `dtype=np.float32 / np.int64` | 피처는 float32(메모리·연산 효율), 레이블은 int64로 고정
