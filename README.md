@@ -23,7 +23,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 5. 픽셀 정규화: `/ 255.0` | 0 ~ 255 정수 밝기 값을 0.0 ~ 1.0 실수 범위로 스케일링
 6. 데이터 타입 통일: `dtype=np.float32 / np.int64` | 피처는 float32(메모리·연산 효율), 레이블은 int64로 고정
 7. 레이블 인코딩: `class_to_index` | 15개 채소 폴더명(문자열)을 알파벳순 0~14 정수로 매핑
-8. 모델별 선택적 표준화: `make_pipeline(StandardScaler(), ...)` | 거리·기울기 기반 모델(k-NN, SVM, MLP 등)에만 평균 0·표준편차 1로 표준화 적용 (트리 계열은 제외, 파이프라인으로 데이터 누수 방지)
+8. 모델별 선택적 표준화: `make_pipeline(StandardScaler(), ...)` | 거리, 기울기 기반 모델(Logistic Regression, k-NN, SVM, Perceptron, MLP, DNN)에만 평균 0, 표준편차 1로 표준화 적용 (트리 계열은 제외, 파이프라인으로 데이터 누수 방지)
 
 ## 입력 파라미터: 랜덤 파라미터 10개 생성
 - `PARAMETER_SEED`: 파라미터용 시드
