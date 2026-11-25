@@ -125,7 +125,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 4: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8740 | train_accuracy=0.9997
 -  Top 5: params={'max_depth': 35, 'max_features': np.float64(0.6380442565692083), 'min_samples_leaf': 3, 'n_estimators': 65} | test_accuracy=0.8603 | train_accuracy=0.9996
 ![모델 정확도 그래프](./model_accuracy_plots/random_forest_train_validation_accuracy.png)
-### Bagging Classifier
+### Bagging Classifier (Decision Tree 기반)
 평균: test accuracy = 0.8579 | train accuracy = 0.9981
 -  Top 1: params={'base_max_depth': 30, 'max_features': np.float64(0.824542293027221), 'max_samples': np.float64(0.8397952957497588), 'n_estimators': 77} | test_accuracy=0.8657 | train_accuracy=1.0000
 -  Top 2: params={'base_max_depth': 21, 'max_features': np.float64(0.8577774811252881), 'max_samples': np.float64(0.66607900647939), 'n_estimators': 93} | test_accuracy=0.8647 | train_accuracy=1.0000
@@ -133,7 +133,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 4: params={'base_max_depth': 26, 'max_features': np.float64(0.6969886825702467), 'max_samples': np.float64(0.5211763359571939), 'n_estimators': 96} | test_accuracy=0.8660 | train_accuracy=1.0000
 -  Top 5: params={'base_max_depth': 12, 'max_features': np.float64(0.7482854308468129), 'max_samples': np.float64(0.9903740279316868), 'n_estimators': 70} | test_accuracy=0.8277 | train_accuracy=0.9907
 ![모델 정확도 그래프](./model_accuracy_plots/bagging_classifier_train_validation_accuracy.png)
-### Extra Trees
+### Extra Trees (Decision Tree 기반)
 평균: test accuracy = 0.9016 | train accuracy = 1.0000
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.9093 | train_accuracy=1.0000
 -  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.9027 | train_accuracy=1.0000
@@ -242,7 +242,7 @@ If you use this dataset, please cite the original paper as requested by the auth
   * **증가 시:** 세밀한 말단 분기를 제한해 **과적합 억제**.
 * **`criterion` (`gini`, `entropy`, `log_loss`):** 분할 기준. 불순도 계산 방식에 따른 미세 분기 차이.
 
-#### Bagging Classifier
+#### Bagging Classifier (Decision Tree 기반)
 * **`n_estimators` (기본 추정기 수):** 증가 시 평균/투표 안정성이 높아져 **분산 감소**, 대신 학습·예측 시간 증가.
 * **`max_samples` / `max_features`:** 각 기본 모델이 사용할 샘플/특성 비율. 낮출수록 모델 간 다양성 증가(너무 낮으면 개별 모델 약화로 과소적합 가능).
 * **`estimator`:** 기본 모델(보통 Decision Tree). 기반 모델의 복잡도가 전체 앙상블 특성에 직접 반영됨.
@@ -252,7 +252,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 * **`max_features`:** 각 분기에서 고려할 특성 수. 줄일수록 트리 간 상관관계가 낮아져 분산 감소에 유리하나, 너무 작으면 핵심 변수 선택이 어려울 수 있음.
 * **`max_depth`, `min_samples_split`, `min_samples_leaf`:** 개별 트리 크기 제한을 통한 과적합 제어 및 속도 조절.
 
-#### Extra Trees
+#### Extra Trees (Decision Tree 기반)
 * **`n_estimators`:** 트리 수. 증가 시 분산 감소, 계산 비용 증가.
 * **`max_features`:** 분기 후보 특성 수. 작을수록 트리 간 다양성 증가.
 * **`max_depth`, `min_samples_split`:** 분할 임계값을 무작위로 고르는 특성상 트리가 깊어질 수 있으므로 깊이/샘플 제한으로 과적합과 속도를 조절.
