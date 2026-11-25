@@ -20,84 +20,84 @@ If you use this dataset, please cite the original paper as requested by the auth
   + 별도로 랜덤 생성 후 각 파라미터 생성에서 공유
 ## 성능 비교: 각 모델별 정확도가 가장 높은 5개의 파라미터 조합의 평균값 비교
 ### Logistic Regression
-평균: 0.6699
+평균: test accuracy = 0.6699 | train accuracy = 0.8033
  - Top 1: params={'C': np.float64(0.3502718917554013), 'max_iter': 1553} | test_accuracy=0.6713 | train_accuracy=0.8064
  - Top 2: params={'C': np.float64(0.10477323365227816), 'max_iter': 667} | test_accuracy=0.6727 | train_accuracy=0.7821
  - Top 3: params={'C': np.float64(0.25202399872719894), 'max_iter': 515} | test_accuracy=0.6707 | train_accuracy=0.8011
  - Top 4: params={'C': np.float64(0.6041468348066917), 'max_iter': 1639} | test_accuracy=0.6653 | train_accuracy=0.8158
  - Top 5: params={'C': np.float64(0.46737903782076806), 'max_iter': 1358} | test_accuracy=0.6697 | train_accuracy=0.8113
 ### k-Nearest Neighbors (k-NN)
-평균: 0.8039
+평균: test accuracy = 0.8039 | train accuracy = 0.9713
 -  Top 1: params={'n_neighbors': 11, 'p': 1, 'weights': 'distance'} | test_accuracy=0.8283 | train_accuracy=1.0000
 -  Top 2: params={'n_neighbors': 8, 'p': 1, 'weights': 'uniform'} | test_accuracy=0.8153 | train_accuracy=0.8565
 -  Top 3: params={'n_neighbors': 9, 'p': 2, 'weights': 'distance'} | test_accuracy=0.8040 | train_accuracy=1.0000
 -  Top 4: params={'n_neighbors': 17, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7890 | train_accuracy=1.0000
 -  Top 5: params={'n_neighbors': 18, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7830 | train_accuracy=1.0000
 ### Support Vector Machine (SVM)
-평균: 0.9363
+평균: test accuracy = 0.9363 | train accuracy = 0.9938
 -  Top 1: params={'C': np.float64(44.00139059238714), 'gamma': np.float64(0.0021602642622069383), 'kernel': 'rbf'} | test_accuracy=0.9573 | train_accuracy=1.0000
 -  Top 2: params={'C': np.float64(961.4375218857606), 'gamma': np.float64(0.0012564327892794409), 'kernel': 'rbf'} | test_accuracy=0.9560 | train_accuracy=1.0000
 -  Top 3: params={'C': np.float64(1.6777388393177377), 'gamma': np.float64(0.0008544397929536556), 'kernel': 'rbf'} | test_accuracy=0.9227 | train_accuracy=0.9737
 -  Top 4: params={'C': np.float64(34.881044844591194), 'gamma': np.float64(0.006034305320476808), 'kernel': 'rbf'} | test_accuracy=0.9270 | train_accuracy=1.0000
 -  Top 5: params={'C': np.float64(94.25660090175117), 'gamma': np.float64(0.0001330435200932225), 'kernel': 'rbf'} | test_accuracy=0.9183 | train_accuracy=0.9953
 ### Decision Tree
-평균: 0.5793
+평균: test accuracy = 0.5793 | train accuracy = 0.9264
 -  Top 1: params={'criterion': 'entropy', 'max_depth': 45, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 1} | test_accuracy=0.5847 | train_accuracy=1.0000
 -  Top 2: params={'criterion': 'entropy', 'max_depth': 40, 'max_features': np.float64(0.48590207748087033), 'min_samples_leaf': 1} | test_accuracy=0.5957 | train_accuracy=1.0000
 -  Top 3: params={'criterion': 'entropy', 'max_depth': 12, 'max_features': np.float64(0.647599603185538), 'min_samples_leaf': 1} | test_accuracy=0.5717 | train_accuracy=0.8675
 -  Top 4: params={'criterion': 'entropy', 'max_depth': 21, 'max_features': np.float64(0.8008884735754034), 'min_samples_leaf': 4} | test_accuracy=0.5693 | train_accuracy=0.8815
 -  Top 5: params={'criterion': 'gini', 'max_depth': 21, 'max_features': np.float64(0.32796342556421637), 'min_samples_leaf': 3} | test_accuracy=0.5753 | train_accuracy=0.8829
 ### Random Forest
-평균: 0.8782
+평균: test accuracy = 0.8782 | train accuracy = 0.9998
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.8950 | train_accuracy=1.0000
 -  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.8783 | train_accuracy=0.9999
 -  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8833 | train_accuracy=0.9997
 -  Top 4: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8740 | train_accuracy=0.9997
 -  Top 5: params={'max_depth': 35, 'max_features': np.float64(0.6380442565692083), 'min_samples_leaf': 3, 'n_estimators': 65} | test_accuracy=0.8603 | train_accuracy=0.9996
 ### Bagging Classifier
-평균: 0.8579
+평균: test accuracy = 0.8579 | train accuracy = 0.9981
 -  Top 1: params={'base_max_depth': 30, 'max_features': np.float64(0.824542293027221), 'max_samples': np.float64(0.8397952957497588), 'n_estimators': 77} | test_accuracy=0.8657 | train_accuracy=1.0000
 -  Top 2: params={'base_max_depth': 21, 'max_features': np.float64(0.8577774811252881), 'max_samples': np.float64(0.66607900647939), 'n_estimators': 93} | test_accuracy=0.8647 | train_accuracy=1.0000
 -  Top 3: params={'base_max_depth': 26, 'max_features': np.float64(0.7623924077137898), 'max_samples': np.float64(0.897431177410142), 'n_estimators': 49} | test_accuracy=0.8653 | train_accuracy=1.0000
 -  Top 4: params={'base_max_depth': 26, 'max_features': np.float64(0.6969886825702467), 'max_samples': np.float64(0.5211763359571939), 'n_estimators': 96} | test_accuracy=0.8660 | train_accuracy=1.0000
 -  Top 5: params={'base_max_depth': 12, 'max_features': np.float64(0.7482854308468129), 'max_samples': np.float64(0.9903740279316868), 'n_estimators': 70} | test_accuracy=0.8277 | train_accuracy=0.9907
 ### Extra Trees
-평균: 0.9016
+평균: test accuracy = 0.9016 | train accuracy = 1.0000
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.9093 | train_accuracy=1.0000
 -  Top 2: params={'max_depth': 27, 'max_features': np.float64(0.6577668147382395), 'min_samples_leaf': 2, 'n_estimators': 196} | test_accuracy=0.9027 | train_accuracy=1.0000
 -  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8987 | train_accuracy=1.0000
 -  Top 4: params={'max_depth': 42, 'max_features': np.float64(0.6410158363118194), 'min_samples_leaf': 3, 'n_estimators': 110} | test_accuracy=0.9013 | train_accuracy=1.0000
 -  Top 5: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8960 | train_accuracy=1.0000
 ### AdaBoost
-평균: 0.4096
+평균: test accuracy = 0.4096 | train accuracy = 0.4294
 -  Top 1: params={'base_max_depth': 3, 'learning_rate': np.float64(0.040373588785906925), 'n_estimators': 104} | test_accuracy=0.4597 | train_accuracy=0.4712
 -  Top 2: params={'base_max_depth': 3, 'learning_rate': np.float64(0.1291856423208951), 'n_estimators': 48} | test_accuracy=0.4527 | train_accuracy=0.4779
 -  Top 3: params={'base_max_depth': 3, 'learning_rate': np.float64(1.901799945165288), 'n_estimators': 99} | test_accuracy=0.4057 | train_accuracy=0.4267
 -  Top 4: params={'base_max_depth': 2, 'learning_rate': np.float64(0.4078482868970378), 'n_estimators': 44} | test_accuracy=0.3650 | train_accuracy=0.3911
 -  Top 5: params={'base_max_depth': 3, 'learning_rate': np.float64(0.012515689160377982), 'n_estimators': 148} | test_accuracy=0.3650 | train_accuracy=0.3803
 ### Gradient Boosting
-평균: 0.8011
+평균: test accuracy = 0.8011 | train accuracy = 0.9420
 -  Top 1: params={'learning_rate': np.float64(0.22722500913574323), 'max_depth': 3, 'n_estimators': 90, 'subsample': np.float64(0.5022691663934102)} | test_accuracy=0.8220 | train_accuracy=0.9716
 -  Top 2: params={'learning_rate': np.float64(0.3258246313140321), 'max_depth': 4, 'n_estimators': 134, 'subsample': np.float64(0.6683541956581116)} | test_accuracy=0.8197 | train_accuracy=0.9907
 -  Top 3: params={'learning_rate': np.float64(0.25973726900093014), 'max_depth': 3, 'n_estimators': 54, 'subsample': np.float64(0.6759473215950162)} | test_accuracy=0.8067 | train_accuracy=0.9585
 -  Top 4: params={'learning_rate': np.float64(0.057009599572869114), 'max_depth': 3, 'n_estimators': 86, 'subsample': np.float64(0.9561080936847617)} | test_accuracy=0.7820 | train_accuracy=0.8874
 -  Top 5: params={'learning_rate': np.float64(0.31553651583368125), 'max_depth': 2, 'n_estimators': 53, 'subsample': np.float64(0.9237603432713004)} | test_accuracy=0.7750 | train_accuracy=0.9021
 ### Perceptron
-평균: 0.5047
+평균: test accuracy = 0.5047 | train accuracy = 0.5683
 -  Top 1: params={'alpha': np.float64(6.022537138335801e-05), 'eta0': np.float64(0.028103544613341816), 'max_iter': 518, 'penalty': 'l1'} | test_accuracy=0.5113 | train_accuracy=0.5810
 -  Top 2: params={'alpha': np.float64(4.788404078859786e-05), 'eta0': np.float64(0.003045959567897274), 'max_iter': 921, 'penalty': 'l1'} | test_accuracy=0.5147 | train_accuracy=0.5814
 -  Top 3: params={'alpha': np.float64(2.510643507455537e-06), 'eta0': np.float64(0.15348991342280988), 'max_iter': 1334, 'penalty': 'l1'} | test_accuracy=0.5137 | train_accuracy=0.5727
 -  Top 4: params={'alpha': np.float64(1.131385282029806e-05), 'eta0': np.float64(0.01552400806457586), 'max_iter': 1658, 'penalty': 'l2'} | test_accuracy=0.4960 | train_accuracy=0.5461
 -  Top 5: params={'alpha': np.float64(0.00010407521159109486), 'eta0': np.float64(0.006453109157675144), 'max_iter': 1675, 'penalty': 'l1'} | test_accuracy=0.4880 | train_accuracy=0.5605
 ### Multi-Layer Perceptron (MLP)
-평균: 0.8948
+평균: test accuracy = 0.8948 | train accuracy = 0.9889
 -  Top 1: params={'hidden_layer_sizes': (137,), 'activation': 'relu', 'alpha': 0.00013861827264915883, 'max_iter': 37} | test_accuracy=0.9030 | train_accuracy=0.9893
 -  Top 2: params={'hidden_layer_sizes': (218,), 'activation': 'tanh', 'alpha': 0.0004506789823165021, 'max_iter': 62} | test_accuracy=0.8943 | train_accuracy=0.9891
 -  Top 3: params={'hidden_layer_sizes': (256,), 'activation': 'tanh', 'alpha': 0.004971754501585551, 'max_iter': 95} | test_accuracy=0.9010 | train_accuracy=0.9886
 -  Top 4: params={'hidden_layer_sizes': (206,), 'activation': 'tanh', 'alpha': 0.0010152124118579348, 'max_iter': 89} | test_accuracy=0.8907 | train_accuracy=0.9889
 -  Top 5: params={'hidden_layer_sizes': (172,), 'activation': 'tanh', 'alpha': 1.4671668787349686e-05, 'max_iter': 77} | test_accuracy=0.8850 | train_accuracy=0.9886
 ### Deep Neural Network (DNN)
-평균: 0.9059
+평균: test accuracy = 0.9059 | train accuracy = 0.9904
 -  Top 1: params={'hidden_layer_sizes': (192, 74), 'activation': 'relu', 'alpha': 0.004432902201407074, 'max_iter': 95} | test_accuracy=0.9120 | train_accuracy=0.9911
 -  Top 2: params={'hidden_layer_sizes': (183, 190, 256), 'activation': 'tanh', 'alpha': 0.004971754501585551, 'max_iter': 95} | test_accuracy=0.9103 | train_accuracy=0.9907
 -  Top 3: params={'hidden_layer_sizes': (140, 232, 136, 218), 'activation': 'tanh', 'alpha': 2.6955217443084343e-05, 'max_iter': 85} | test_accuracy=0.9120 | train_accuracy=0.9905
