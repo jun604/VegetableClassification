@@ -1,5 +1,5 @@
-# 이미지 Classification에 적합한 학습 모델 탐색
-# **Vegetable Classification**
+# **이미지 Classification에 적합한 학습 모델 탐색**
+## **Vegetable Classification**
 
 ## 데이터셋
 
