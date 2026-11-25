@@ -183,6 +183,19 @@ If you use this dataset, please cite the original paper as requested by the auth
 ![모델 정확도 그래프](./model_accuracy_plots/dnn_train_validation_accuracy.png)
 
 ## 정확도 순위
+#### Models ranked by top-5 mean test accuracy:
+1. SVM: test = 0.9363 | train = 0.9938
+2. DNN: test = 0.9059 | train = 0.9904
+3. Extra Trees: test = 0.9016 | train = 1.0000
+4. MLP: test = 0.8948 | train = 0.9889
+5. Random Forest: test = 0.8782 | train = 0.9998
+6. Bagging Classifier: test = 0.8579 | train = 0.9981
+7. k-NN: test = 0.8039 | train = 0.9713
+8. Gradient Boosting: test = 0.8011 | train = 0.9420
+9. Logistic Regression: test = 0.6699 | train = 0.8033
+10. Decision Tree: test = 0.5793 | train = 0.9264
+11. Perceptron: test = 0.5047 | train = 0.5683
+12. AdaBoost: test = 0.4096 | train = 0.4294
 ---
 ## **각 모델의 파라미터 및 특이점 설명**
 ### 1. 선형 · 거리 · 마진 계열
