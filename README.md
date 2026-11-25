@@ -33,14 +33,14 @@ If you use this dataset, please cite the original paper as requested by the auth
   + max_iter: 500 ~ 2000
 - k-Nearest Neighbors (k-NN)
   + n_neighbors: 3 ~ 20
-  + weights: "uniform", "distance"
+  + weights: ["uniform", "distance"]
   + p: 1, 2
 - Support Vector Machine (SVM)
   + c: 0.01 ~ 1,000 (loguniform 사용)
   + gamma: 0.00001 ~ 0.1 (loguniform 사용)
-  + kernel: rbf
+  + kernel: ["rbf"]
 - Decision Tree
-  + criterion: gini, entropy
+  + criterion: ["gini", "entropy"]
   + max_depth: 3 ~ 50
   + min_samples_leaf: 1 ~ 10
   + max_features: 0.3 ~ 1.0 (uniform 사용)
