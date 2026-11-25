@@ -26,6 +26,7 @@ If you use this dataset, please cite the original paper as requested by the auth
  - Top 3: params={'C': np.float64(0.25202399872719894), 'max_iter': 515} | test_accuracy=0.6707 | train_accuracy=0.8011
  - Top 4: params={'C': np.float64(0.6041468348066917), 'max_iter': 1639} | test_accuracy=0.6653 | train_accuracy=0.8158
  - Top 5: params={'C': np.float64(0.46737903782076806), 'max_iter': 1358} | test_accuracy=0.6697 | train_accuracy=0.8113
+![모델 정확도 그래프](./model_accuracy_plots/logistic_regression_train_validation_accuracy.png)
 ### k-Nearest Neighbors (k-NN)
 평균: test accuracy = 0.8039 | train accuracy = 0.9713
 -  Top 1: params={'n_neighbors': 11, 'p': 1, 'weights': 'distance'} | test_accuracy=0.8283 | train_accuracy=1.0000
@@ -33,6 +34,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'n_neighbors': 9, 'p': 2, 'weights': 'distance'} | test_accuracy=0.8040 | train_accuracy=1.0000
 -  Top 4: params={'n_neighbors': 17, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7890 | train_accuracy=1.0000
 -  Top 5: params={'n_neighbors': 18, 'p': 1, 'weights': 'distance'} | test_accuracy=0.7830 | train_accuracy=1.0000
+![모델 정확도 그래프](./model_accuracy_plots/k-nn_train_validation_accuracy.png)
 ### Support Vector Machine (SVM)
 평균: test accuracy = 0.9363 | train accuracy = 0.9938
 -  Top 1: params={'C': np.float64(44.00139059238714), 'gamma': np.float64(0.0021602642622069383), 'kernel': 'rbf'} | test_accuracy=0.9573 | train_accuracy=1.0000
@@ -40,6 +42,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'C': np.float64(1.6777388393177377), 'gamma': np.float64(0.0008544397929536556), 'kernel': 'rbf'} | test_accuracy=0.9227 | train_accuracy=0.9737
 -  Top 4: params={'C': np.float64(34.881044844591194), 'gamma': np.float64(0.006034305320476808), 'kernel': 'rbf'} | test_accuracy=0.9270 | train_accuracy=1.0000
 -  Top 5: params={'C': np.float64(94.25660090175117), 'gamma': np.float64(0.0001330435200932225), 'kernel': 'rbf'} | test_accuracy=0.9183 | train_accuracy=0.9953
+![모델 정확도 그래프](./model_accuracy_plots/svm_train_validation_accuracy.png)
 ### Decision Tree
 평균: test accuracy = 0.5793 | train accuracy = 0.9264
 -  Top 1: params={'criterion': 'entropy', 'max_depth': 45, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 1} | test_accuracy=0.5847 | train_accuracy=1.0000
@@ -47,6 +50,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'criterion': 'entropy', 'max_depth': 12, 'max_features': np.float64(0.647599603185538), 'min_samples_leaf': 1} | test_accuracy=0.5717 | train_accuracy=0.8675
 -  Top 4: params={'criterion': 'entropy', 'max_depth': 21, 'max_features': np.float64(0.8008884735754034), 'min_samples_leaf': 4} | test_accuracy=0.5693 | train_accuracy=0.8815
 -  Top 5: params={'criterion': 'gini', 'max_depth': 21, 'max_features': np.float64(0.32796342556421637), 'min_samples_leaf': 3} | test_accuracy=0.5753 | train_accuracy=0.8829
+![모델 정확도 그래프](./model_accuracy_plots/decision_tree_train_validation_accuracy.png)
 ### Random Forest
 평균: test accuracy = 0.8782 | train accuracy = 0.9998
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.8950 | train_accuracy=1.0000
@@ -54,6 +58,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8833 | train_accuracy=0.9997
 -  Top 4: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8740 | train_accuracy=0.9997
 -  Top 5: params={'max_depth': 35, 'max_features': np.float64(0.6380442565692083), 'min_samples_leaf': 3, 'n_estimators': 65} | test_accuracy=0.8603 | train_accuracy=0.9996
+![모델 정확도 그래프](./model_accuracy_plots/random_forest_train_validation_accuracy.png)
 ### Bagging Classifier
 평균: test accuracy = 0.8579 | train accuracy = 0.9981
 -  Top 1: params={'base_max_depth': 30, 'max_features': np.float64(0.824542293027221), 'max_samples': np.float64(0.8397952957497588), 'n_estimators': 77} | test_accuracy=0.8657 | train_accuracy=1.0000
@@ -61,6 +66,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'base_max_depth': 26, 'max_features': np.float64(0.7623924077137898), 'max_samples': np.float64(0.897431177410142), 'n_estimators': 49} | test_accuracy=0.8653 | train_accuracy=1.0000
 -  Top 4: params={'base_max_depth': 26, 'max_features': np.float64(0.6969886825702467), 'max_samples': np.float64(0.5211763359571939), 'n_estimators': 96} | test_accuracy=0.8660 | train_accuracy=1.0000
 -  Top 5: params={'base_max_depth': 12, 'max_features': np.float64(0.7482854308468129), 'max_samples': np.float64(0.9903740279316868), 'n_estimators': 70} | test_accuracy=0.8277 | train_accuracy=0.9907
+![모델 정확도 그래프](./model_accuracy_plots/bagging_classifier_train_validation_accuracy.png)
 ### Extra Trees
 평균: test accuracy = 0.9016 | train accuracy = 1.0000
 -  Top 1: params={'max_depth': 47, 'max_features': np.float64(0.412868964648599), 'min_samples_leaf': 1, 'n_estimators': 182} | test_accuracy=0.9093 | train_accuracy=1.0000
@@ -68,6 +74,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'max_depth': 47, 'max_features': np.float64(0.49669890222806623), 'min_samples_leaf': 3, 'n_estimators': 165} | test_accuracy=0.8987 | train_accuracy=1.0000
 -  Top 4: params={'max_depth': 42, 'max_features': np.float64(0.6410158363118194), 'min_samples_leaf': 3, 'n_estimators': 110} | test_accuracy=0.9013 | train_accuracy=1.0000
 -  Top 5: params={'max_depth': 47, 'max_features': np.float64(0.48438184183808064), 'min_samples_leaf': 3, 'n_estimators': 93} | test_accuracy=0.8960 | train_accuracy=1.0000
+![모델 정확도 그래프](./model_accuracy_plots/extra_trees_train_validation_accuracy.png)
 ### AdaBoost
 평균: test accuracy = 0.4096 | train accuracy = 0.4294
 -  Top 1: params={'base_max_depth': 3, 'learning_rate': np.float64(0.040373588785906925), 'n_estimators': 104} | test_accuracy=0.4597 | train_accuracy=0.4712
@@ -75,6 +82,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'base_max_depth': 3, 'learning_rate': np.float64(1.901799945165288), 'n_estimators': 99} | test_accuracy=0.4057 | train_accuracy=0.4267
 -  Top 4: params={'base_max_depth': 2, 'learning_rate': np.float64(0.4078482868970378), 'n_estimators': 44} | test_accuracy=0.3650 | train_accuracy=0.3911
 -  Top 5: params={'base_max_depth': 3, 'learning_rate': np.float64(0.012515689160377982), 'n_estimators': 148} | test_accuracy=0.3650 | train_accuracy=0.3803
+![모델 정확도 그래프](./model_accuracy_plots/adaboost_train_validation_accuracy.png)
 ### Gradient Boosting
 평균: test accuracy = 0.8011 | train accuracy = 0.9420
 -  Top 1: params={'learning_rate': np.float64(0.22722500913574323), 'max_depth': 3, 'n_estimators': 90, 'subsample': np.float64(0.5022691663934102)} | test_accuracy=0.8220 | train_accuracy=0.9716
@@ -82,6 +90,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'learning_rate': np.float64(0.25973726900093014), 'max_depth': 3, 'n_estimators': 54, 'subsample': np.float64(0.6759473215950162)} | test_accuracy=0.8067 | train_accuracy=0.9585
 -  Top 4: params={'learning_rate': np.float64(0.057009599572869114), 'max_depth': 3, 'n_estimators': 86, 'subsample': np.float64(0.9561080936847617)} | test_accuracy=0.7820 | train_accuracy=0.8874
 -  Top 5: params={'learning_rate': np.float64(0.31553651583368125), 'max_depth': 2, 'n_estimators': 53, 'subsample': np.float64(0.9237603432713004)} | test_accuracy=0.7750 | train_accuracy=0.9021
+![모델 정확도 그래프](./model_accuracy_plots/gradient_boosting_train_validation_accuracy.png)
 ### Perceptron
 평균: test accuracy = 0.5047 | train accuracy = 0.5683
 -  Top 1: params={'alpha': np.float64(6.022537138335801e-05), 'eta0': np.float64(0.028103544613341816), 'max_iter': 518, 'penalty': 'l1'} | test_accuracy=0.5113 | train_accuracy=0.5810
@@ -89,6 +98,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'alpha': np.float64(2.510643507455537e-06), 'eta0': np.float64(0.15348991342280988), 'max_iter': 1334, 'penalty': 'l1'} | test_accuracy=0.5137 | train_accuracy=0.5727
 -  Top 4: params={'alpha': np.float64(1.131385282029806e-05), 'eta0': np.float64(0.01552400806457586), 'max_iter': 1658, 'penalty': 'l2'} | test_accuracy=0.4960 | train_accuracy=0.5461
 -  Top 5: params={'alpha': np.float64(0.00010407521159109486), 'eta0': np.float64(0.006453109157675144), 'max_iter': 1675, 'penalty': 'l1'} | test_accuracy=0.4880 | train_accuracy=0.5605
+![모델 정확도 그래프](./model_accuracy_plots/perceptron_train_validation_accuracy.png)
 ### Multi-Layer Perceptron (MLP)
 평균: test accuracy = 0.8948 | train accuracy = 0.9889
 -  Top 1: params={'hidden_layer_sizes': (137,), 'activation': 'relu', 'alpha': 0.00013861827264915883, 'max_iter': 37} | test_accuracy=0.9030 | train_accuracy=0.9893
@@ -96,6 +106,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'hidden_layer_sizes': (256,), 'activation': 'tanh', 'alpha': 0.004971754501585551, 'max_iter': 95} | test_accuracy=0.9010 | train_accuracy=0.9886
 -  Top 4: params={'hidden_layer_sizes': (206,), 'activation': 'tanh', 'alpha': 0.0010152124118579348, 'max_iter': 89} | test_accuracy=0.8907 | train_accuracy=0.9889
 -  Top 5: params={'hidden_layer_sizes': (172,), 'activation': 'tanh', 'alpha': 1.4671668787349686e-05, 'max_iter': 77} | test_accuracy=0.8850 | train_accuracy=0.9886
+![모델 정확도 그래프](./model_accuracy_plots/mlp_train_validation_accuracy.png)
 ### Deep Neural Network (DNN)
 평균: test accuracy = 0.9059 | train accuracy = 0.9904
 -  Top 1: params={'hidden_layer_sizes': (192, 74), 'activation': 'relu', 'alpha': 0.004432902201407074, 'max_iter': 95} | test_accuracy=0.9120 | train_accuracy=0.9911
@@ -103,6 +114,7 @@ If you use this dataset, please cite the original paper as requested by the auth
 -  Top 3: params={'hidden_layer_sizes': (140, 232, 136, 218), 'activation': 'tanh', 'alpha': 2.6955217443084343e-05, 'max_iter': 85} | test_accuracy=0.9120 | train_accuracy=0.9905
 -  Top 4: params={'hidden_layer_sizes': (149, 17, 136), 'activation': 'relu', 'alpha': 0.06240208054279869, 'max_iter': 84} | test_accuracy=0.8950 | train_accuracy=0.9895
 -  Top 5: params={'hidden_layer_sizes': (80, 218, 229, 127), 'activation': 'tanh', 'alpha': 0.012986373522790008, 'max_iter': 59} | test_accuracy=0.9003 | train_accuracy=0.9901
+![모델 정확도 그래프](./model_accuracy_plots/dnn_train_validation_accuracy.png)
 
 ## 정확도 순위
 ---
