@@ -18,6 +18,20 @@ If you use this dataset, please cite the original paper as requested by the auth
 ## 입력 파라미터: 랜덤 파라미터 10개 생성
 - `PARAMETER_SEED`: 파라미터용 시드
   + 별도로 랜덤 생성 후 각 파라미터 생성에서 공유
+- Logistic Regression
+  + c: 0.001 ~ 1,000
+  + max_iter: 500 ~ 2000
+- k-Nearest Neighbors (k-NN)
+- Support Vector Machine (SVM)
+- Decision Tree
+- Random Forest
+- Bagging Classifier
+- Extra Trees
+- AdaBoost
+- Gradient Boosting
+- Perceptron
+- Multi-Layer Perceptron (MLP)
+- Deep Neural Network (DNN)
 ## 성능 비교: 각 모델별 정확도가 가장 높은 5개의 파라미터 조합의 평균값 비교
 ### Logistic Regression
 평균: test accuracy = 0.6699 | train accuracy = 0.8033
